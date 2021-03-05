@@ -1,0 +1,308 @@
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+
+/*body {
+  
+ background-image: url("https://i.ytimg.com/vi/Go_we2gPo44/maxresdefault.jpg");
+}*/
+
+.container{
+  height:100vh;
+  width:100%;
+  background:#131417;
+}
+
+header{
+  width:100%;
+  display:flex;
+  background:#171c24;
+  padding:20px;
+  justify-content:space-between;
+  align-items:center;
+  color:#ffffff;
+  font-family:'Poppins',sans-serif;
+}
+
+header .logo h2{
+  cursor:default;
+}
+
+header .menuHeader{
+  display:flex;    
+}
+
+header .menuHeader a{
+  display:flex;
+  text-decoration:none;
+  padding:10px 5px;
+  margin:0px 5px;
+  color:#ffffff;
+  font-family:'Poppins',sans-serif;
+  transition:all .3s ease;
+}
+
+header .menuHeader a:hover{
+    color: cyan;
+  border-radius: 5px;
+  box-shadow:  0 0 5px #33ffff,
+               0 0 10px #66ffff;
+}
+
+header .menuHeader i{
+  display:flex;
+  text-decoration:none;
+  padding:10px 5px;
+  margin:0px 5px;
+ 
+}
+
+.main{
+  display:flex;
+  align-items:center;
+  height: 80%;
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  padding:0px 80px;   
+  flex-wrap:nowrap;
+}
+
+.mainSvg{
+  display:flex;
+   
+}
+
+.imgSvg{
+  width:300px;
+  display:flex;
+}
+
+.textMain{
+  display:flex;
+  justify-content: center;
+  flex-direction:column;
+   
+}
+
+.textMain h2,
+.textMain p{
+  color:#fff;
+  font-family:'Poppins',sans-serif;
+}
+
+.containerBtn{
+  margin:30px 0px;
+}
+
+.btnLogin{
+  color:#fff;
+  background:#00bbff;
+  padding:10px 20px;
+  text-decoration:none;
+  border-radius:4px;
+  transition:all 1s ease;
+  font-family:'Poppins',sans-serif;
+}
+
+.btnLogin:hover{
+  background:#FB2B27;
+
+}
+
+.hide{
+  display:none;
+}
+
+.sideBar{
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  background: #171c24;
+  transition: left 0.4s ease;
+}
+
+.sidebar.show{
+  left: 0px;
+}
+
+/*.sideBar span{
+
+}*/
+
+.sideBar a {
+  display:block;
+  color: white;
+  font-size: 20px;
+  padding-left:15px;
+  font-weight: 600;
+  line-height: 65px;
+ 
+  letter-spacing: 1px; 
+  text-decoration:none;
+  font-family:'Sansita Swashed', cursive,sans-serif;
+   border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.sideBar i{
+  text-align:center;
+  width:100%;
+  color:#ccc;
+  font-size:20px;
+}
+
+.sideBar .active{
+  color: cyan;
+ 
+  border-left:5px solid #ccc;
+  border-left-color: cyan;
+} 
+
+
+
+@media screen and (max-width: 768px){
+ .row{
+    padding:0px 20px;
+  }
+}
+
+@media screen and (max-width: 550px){
+  header .menuHeader a {
+    font-size:15px;
+    margin: 0px;
+  }
+  .imgSvg{
+    width:100px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  header .menuHeader a , header .menuHeader i{
+     display:none;
+  }
+  
+  header{
+    flex-direction:row-reverse;
+  }
+  
+  .btnMenu{
+  text-align: center;
+  background: #1b1b1b;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+  height: 45px;
+  width: 45px;
+  border:none;
+  outline:none;  
+  }
+  
+  .btnMenu span{
+  color: white;
+  font-size: 28px;
+  line-height: 45px;
+}
+  
+  .row {
+    padding: 0px 20px; 
+  }
+  .imgSvg{
+    display:none;
+  }
+  .hide{
+    display:block;
+  }
+  
+  
+}
+
+/*
+.container{
+  background:#57baec;
+  height:100vh;
+  width:100%;
+  display:flex;
+  align-items:center;
+}
+
+header{
+  width:100%;
+}
+
+.menu a{
+  display:flex;
+}
+
+
+.loginContainer{
+  background:#fefefe;
+  display:flex;
+  flex-flow:column;
+  width:60% ;
+  margin:auto;
+  border-radius:15px;
+}
+
+.headerLogins{
+  display:flex;
+  text-align:center;
+  justify-content:center;
+  align-items:center;
+  padding:10px 0px;
+}
+
+.headerLogins i{
+  font-size:50px;
+  border:5px solid #000;
+  border-radius:60px;
+  padding:10px 15px;
+} 
+
+.loginDiscord{
+  text-align:center;
+  padding:20px 0px;
+  
+}
+
+.loginDiscord a {
+  background:#66bbd6;
+  color:#fff;
+  text-decoration:none;
+  padding:10px 60px;
+  font-weight:500;
+  space-letter:13px;
+  transition:all .3s linear;
+}
+
+.loginDiscord a:hover{
+  background:#1BAAD8;
+ 
+}
+
+.loginContainer .footLogin{
+  background:#f6f6f6;
+  border-radius:15px; 
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:30px;
+}
+
+.footLogin i{
+  font-size:30px;
+  margin-right:5px;
+  color:#7289da;
+}
+
+.footLogin p{
+  font-weight:400;
+  color:#3F3F3F;
+}
+ */
+
